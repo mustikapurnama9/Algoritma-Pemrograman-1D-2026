@@ -1,0 +1,185 @@
+{
+  "version": "7.0",
+  "nodes": [
+    {
+      "id": 1,
+      "type": "start",
+      "text": "Start",
+      "x": 430,
+      "y": 55,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 2,
+      "type": "input",
+      "text": "saldo_udin = 100000;\njumlah_buku = 3;\nharga_buku = 25000;\njumlah_bulpen = 2;\nharga_bulpen = 8000;\njumlah_flasdisk = 1;\nharga_flasdisk = 75000;",
+      "x": 312,
+      "y": 163,
+      "w": 355,
+      "h": 235
+    },
+    {
+      "id": 4,
+      "type": "process",
+      "text": "total_harga_buku = jumlah_buku * harga_buku",
+      "x": 774,
+      "y": 247,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 5,
+      "type": "process",
+      "text": "total_harga_bulpen = jumlah_bulpen * harga_bulpen",
+      "x": 1112,
+      "y": 244,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 6,
+      "type": "process",
+      "text": "total_harga_flasdisk = jumlah_flasdisk * harga_flasdisk",
+      "x": 1456,
+      "y": 236,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 10,
+      "type": "process",
+      "text": "totalsemua_sebelumdiskon = (total_harga_buku + total_harga_bulpen + total_harga_flasdisk)",
+      "x": 1434,
+      "y": 408,
+      "w": 230,
+      "h": 145
+    },
+    {
+      "id": 15,
+      "type": "process",
+      "text": "diskon = totalsemua_sebelumdiskon * 0.10",
+      "x": 1468,
+      "y": 714,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 18,
+      "type": "process",
+      "text": "totalsemua_sesudahdiskon = totalsemua_sebelumdiskon - diskon",
+      "x": 1175,
+      "y": 705,
+      "w": 205,
+      "h": 95
+    },
+    {
+      "id": 19,
+      "type": "process",
+      "text": "besar_pajak = totalsemua_sesudahdiskon * 0.11",
+      "x": 877,
+      "y": 718,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 20,
+      "type": "process",
+      "text": "totalsemua_sesudahpajak = totalsemua_sesudahdiskon + besar_pajak",
+      "x": 594,
+      "y": 710,
+      "w": 215,
+      "h": 105
+    },
+    {
+      "id": 21,
+      "type": "process",
+      "text": "uang_kembalian = saldo_udin - totalsemua_sesudahpajak",
+      "x": 462,
+      "y": 495,
+      "w": 200,
+      "h": 110
+    },
+    {
+      "id": 22,
+      "type": "output",
+      "text": "uang_kembalian",
+      "x": 811,
+      "y": 511,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 23,
+      "type": "end",
+      "text": "End",
+      "x": 1192,
+      "y": 517,
+      "w": 150,
+      "h": 58
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2,
+      "branch": null
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "branch": null
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "branch": null
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "branch": null
+    },
+    {
+      "from": 6,
+      "to": 10,
+      "branch": null
+    },
+    {
+      "from": 10,
+      "to": 15,
+      "branch": null
+    },
+    {
+      "from": 15,
+      "to": 18,
+      "branch": null
+    },
+    {
+      "from": 18,
+      "to": 19,
+      "branch": null
+    },
+    {
+      "from": 19,
+      "to": 20,
+      "branch": null
+    },
+    {
+      "from": 20,
+      "to": 21,
+      "branch": null
+    },
+    {
+      "from": 21,
+      "to": 22,
+      "branch": null
+    },
+    {
+      "from": 22,
+      "to": 23,
+      "branch": null
+    }
+  ],
+  "nextId": 24
+}
